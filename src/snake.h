@@ -18,6 +18,7 @@ struct Snake {
         static vector<Rectangle> body;
         int length;
         void update();
+        void reset();
         Snake();
 };
 

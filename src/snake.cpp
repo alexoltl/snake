@@ -49,3 +49,14 @@ void Snake::update() {
         step = 0;
     }
 }
+
+void Snake::reset() {
+    body.clear();
+    head = {tileSize * 5, tileSize * 5, tileSize, tileSize};
+    length = 1;
+    direction = "up";
+    step = 0;
+    stepNext = 12;
+
+    body.push_back(head);
+}
