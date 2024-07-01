@@ -13,6 +13,7 @@ const int gridSize = 9;
 const int screenWidth = gridSize * tileSize;
 const int screenHeight = gridSize * tileSize;
 bool gameOver = false;
+bool paused = false;
 int score = 0;
 vector<Rectangle> tiles;
 
@@ -43,6 +44,7 @@ int main () {
             }
         } else if (!gameOver) {
             bro.update();
+            if (IsKeyPressed(KEY_SPACE)) bro.paused = !bro.paused;
 
             if (CheckCollisionRecs(bro.body[0], apple.rect)) {
                 score+=1;

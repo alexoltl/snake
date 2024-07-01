@@ -16,6 +16,7 @@ struct Snake {
         vector<Vector2> positions;
     public:
         static vector<Rectangle> body;
+        static bool paused;
         int length;
         void update();
         void reset();
